@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>branch_key</key>
+	<dict>
+		<key>live</key>
+		<string>key_live_mo8474PtvIkwXvWhRXrtEpmaFEmpaFwY</string>
+	</dict>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>mxa99.app.link</string>
+		<string>mxa99-alternate.app.link</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>BranchKR</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>com.BranchSample.Kun</string>
+		</dict>
+	</array>
+</dict>
+</plist>
