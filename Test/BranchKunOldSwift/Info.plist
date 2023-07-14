@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.BranchSample.Kun</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>BranchKRTest</string>
+			</array>
+		</dict>
+	</array>
+	<key>branch_key</key>
+	<dict>
+		<key>test</key>
+		<string>key_test_gg8566MrqImvXz2dGWOkwpinFymgiCSc</string>
+		<key>live</key>
+		<string>key_live_mo8474PtvIkwXvWhRXrtEpmaFEmpaFwY</string>
+	</dict>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>kun.app.link</string>
+		<string>kun-alternate.app.link</string>
+		<string>kun.test-app.link</string>
+		<string>kun-alternate.test-app.link</string>
+	</array>
+</dict>
+</plist>

@@ -7,6 +7,8 @@
 
 import UIKit
 import Branch
+import AppTrackingTransparency
+import AdSupport
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,11 +20,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        Branch.setUseTestBranchKey(true)
         
-        Branch.getInstance().enableLogging()
+        //Branch.getInstance().enableLogging()
+
         
         Branch.getInstance().initSession(launchOptions: launchOptions) { (params, error) in
              // do stuff with deep link data (nav to page, display content, etc)
-            print(params as? [String: AnyObject] ?? {})
+            //print(params as? [String: AnyObject] ?? {})
+            
+
+            // latest
+            let sessionParams = Branch.getInstance().getLatestReferringParams()
+            print("App delegate param")
+            print(sessionParams as? [String: AnyObject] ?? {})
+            
+            let installParams = Branch.getInstance().getLatestReferringParamsSynchronous()
+            print("App delegate install param")
+            print(installParams as? [String: AnyObject] ?? {})
+            
         }
         
         return true
@@ -45,6 +59,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // handler for Push Notifications
       Branch.getInstance().handlePushNotification(userInfo)
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        requestPermission()
+        
+    }
+    
+    //NEWLY ADDED PERMISSIONS FOR iOS 14
+    func requestPermission() {
+        ATTrackingManager.requestTrackingAuthorization { (status) in
+            switch status {
+            case .authorized:
+                print("authorized")
+                print(ASIdentifierManager.shared().advertisingIdentifier.uuidString) // IDFA
+            case .denied:
+                print("denied")
+                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            case .notDetermined:
+                print("notDetermined")
+            case .restricted:
+                print("restricted")
+            }
+        }
+    }
+
 
 }
 
