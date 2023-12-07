@@ -9,6 +9,10 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+
+			<key>CFBundleIdentifier</key>
+			<string>com.BranchIOS.Kun</string>
+
 			<key>CFBundleURLName</key>
 			<string>com.BranchSample.Kun</string>
 			<key>CFBundleURLSchemes</key>
