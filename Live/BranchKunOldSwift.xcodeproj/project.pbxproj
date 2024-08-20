@@ -16,7 +16,6 @@
 		523F26222990DFE600AF3729 /* BranchKunOldSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F26212990DFE600AF3729 /* BranchKunOldSwiftUITestsLaunchTests.swift */; };
 		523F262F2990E0AA00AF3729 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F262E2990E0AA00AF3729 /* FirstScreen.swift */; };
 		523F26352990F56800AF3729 /* BranchKunOldSwift.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 523F26342990F24000AF3729 /* BranchKunOldSwift.entitlements */; };
-		523F26382990F77900AF3729 /* Branch in Frameworks */ = {isa = PBXBuildFile; productRef = 523F26372990F77900AF3729 /* Branch */; };
 		523F263B2990F7A800AF3729 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523F263A2990F7A800AF3729 /* iAd.framework */; };
 		523F263D2990F7AE00AF3729 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523F263C2990F7AE00AF3729 /* WebKit.framework */; };
 		523F263F2990F7B900AF3729 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523F263E2990F7B900AF3729 /* CoreTelephony.framework */; };
@@ -26,6 +25,7 @@
 		523F26472990F7DE00AF3729 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523F26462990F7DE00AF3729 /* AdSupport.framework */; };
 		523F26492990F7E600AF3729 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523F26482990F7E600AF3729 /* AdServices.framework */; };
 		6F2CD5E72A60EF200030E790 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2CD5E62A60EF200030E790 /* AppTrackingTransparency.framework */; };
+		6FC9C6262C62086500F13322 /* BranchSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC9C6252C62086500F13322 /* BranchSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,11 +80,11 @@
 				523F26452990F7D700AF3729 /* CoreServices.framework in Frameworks */,
 				523F26432990F7C900AF3729 /* SystemConfiguration.framework in Frameworks */,
 				523F26412990F7C200AF3729 /* CoreSpotlight.framework in Frameworks */,
+				6FC9C6262C62086500F13322 /* BranchSDK in Frameworks */,
 				6F2CD5E72A60EF200030E790 /* AppTrackingTransparency.framework in Frameworks */,
 				523F263F2990F7B900AF3729 /* CoreTelephony.framework in Frameworks */,
 				523F263D2990F7AE00AF3729 /* WebKit.framework in Frameworks */,
 				523F263B2990F7A800AF3729 /* iAd.framework in Frameworks */,
-				523F26382990F77900AF3729 /* Branch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 			);
 			name = BranchKunOldSwift;
 			packageProductDependencies = (
-				523F26372990F77900AF3729 /* Branch */,
+				6FC9C6252C62086500F13322 /* BranchSDK */,
 			);
 			productName = BranchKunOldSwift;
 			productReference = 523F25FB2990DFE200AF3729 /* BranchKunOldSwift.app */;
@@ -265,7 +265,7 @@
 			);
 			mainGroup = 523F25F22990DFE200AF3729;
 			packageReferences = (
-				523F26362990F77900AF3729 /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */,
+				6FC9C6242C62086500F13322 /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */,
 			);
 			productRefGroup = 523F25FC2990DFE200AF3729 /* Products */;
 			projectDirPath = "";
@@ -541,7 +541,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3C54BC245N;
+				DEVELOPMENT_TEAM = R63EM248DP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -561,7 +561,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3C54BC245N;
+				DEVELOPMENT_TEAM = R63EM248DP;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -580,7 +580,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3C54BC245N;
+				DEVELOPMENT_TEAM = R63EM248DP;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BranchKunSwift.BranchKunOldSwiftUITests;
@@ -598,7 +598,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3C54BC245N;
+				DEVELOPMENT_TEAM = R63EM248DP;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BranchKunSwift.BranchKunOldSwiftUITests;
@@ -652,21 +652,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		523F26362990F77900AF3729 /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */ = {
+		6FC9C6242C62086500F13322 /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/BranchMetrics/ios-branch-sdk-spm";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 3.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		523F26372990F77900AF3729 /* Branch */ = {
+		6FC9C6252C62086500F13322 /* BranchSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 523F26362990F77900AF3729 /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */;
-			productName = Branch;
+			package = 6FC9C6242C62086500F13322 /* XCRemoteSwiftPackageReference "ios-branch-sdk-spm" */;
+			productName = BranchSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

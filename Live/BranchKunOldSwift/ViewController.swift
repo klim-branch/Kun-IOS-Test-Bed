@@ -5,7 +5,7 @@
 //  Created by Kun on 6/2/2023.
 //
 import UIKit
-import Branch
+import BranchSDK
 import AppTrackingTransparency
 import AdSupport
 
