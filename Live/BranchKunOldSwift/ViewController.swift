@@ -22,13 +22,13 @@ class ViewController: UIViewController {
         
 
         
-        let sessionParams = Branch.getInstance().getLatestReferringParams()
-        Branch.getInstance().setIdentity("Kun")
+//        let sessionParams = Branch.getInstance().getLatestReferringParams()
+//        Branch.getInstance().setIdentity("Kun")
 
-        print("Session param testing")
-        print(sessionParams as? [String: AnyObject] ?? {})
-        Hello.text = sessionParams?["+is_first_session"] as? String
-        Hello.text = "branch testing"
+//        print("Session param testing")
+//        print(sessionParams as? [String: AnyObject] ?? {})
+//        Hello.text = sessionParams?["+is_first_session"] as? String
+//        Hello.text = "branch testing"
     
     }
     
@@ -81,6 +81,38 @@ class ViewController: UIViewController {
             "Custom_Event_Property_Key2": "Custom_Event_Property_val2"
         ]
         event.logEvent() // Log the event.
+        
+        showPurchasePopup();
+    }
+
+    func showPurchasePopup() {
+        // Create an alert controller
+        let alertController = UIAlertController(
+            title: "Purchase Confirmed",
+            message: "You just bought some random item",
+            preferredStyle: .alert
+        )
+        
+        // Add an action to the alert (e.g., OK button)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        // Get the root view controller to present the alert
+        if let rootViewController = UIApplication.shared.keyWindow?.rootViewController {
+            // Present the alert
+            rootViewController.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func GenerateLinkButton(_ sender: Any){
+        
+        let buo: BranchUniversalObject = BranchUniversalObject(canonicalIdentifier: "item/12345")
+        let lp: BranchLinkProperties = BranchLinkProperties()
+
+        buo.getShortUrl(with: lp) { url, error in
+            print(url ?? "")
+        }
+        
+        print("Clicked Generate Link")
     }
 }
-

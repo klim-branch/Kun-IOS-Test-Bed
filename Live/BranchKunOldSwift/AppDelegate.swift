@@ -18,7 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Enable basic logging
         Branch.enableLogging()
+
+        // Choose the minimum log level to be logged
+        //Branch.enableLogging(at: .error)
+        
         //SDK-2327
 //        #if DEBUG
 //            Branch.setUseTestBranchKey(true)
@@ -33,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //enable logging
 
             
-            //SDK validation
-            //Branch.getInstance().validateSDKIntegration()
+        //SDK validation
+        Branch.getInstance().validateSDKIntegration()
         
         //Branch.setUseTestBranchKey(true)
         
